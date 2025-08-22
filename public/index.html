@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Background Remover</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🪄 Background Remover</h1>
+    <p>Upload an image → remove the background → download PNG</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <label class="file-drop" id="drop">
+        <input type="file" id="file" accept="image/*" hidden />
+        <span>Drop image here or <button type="button" id="browse">Browse</button></span>
+      </label>
+
+      <div class="preview">
+        <div>
+          <h3>Original</h3>
+          <img id="orig" alt="original preview"/>
+        </div>
+        <div>
+          <h3>Result</h3>
+          <img id="result" alt="result preview"/>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="remove" disabled>Remove Background</button>
+        <a id="download" download="result.png" class="hidden">Download PNG</a>
+      </div>
+
+      <div id="msg"></div>
+    </div>
+  </main>
+
+  <footer>
+    <small>Powered by <a href="https://www.remove.bg/api" target="_blank" rel="noreferrer">remove.bg API</a></small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
